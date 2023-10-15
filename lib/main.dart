@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -16,7 +17,36 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.black87,
           shadowColor: Colors.yellow,
-          title: const Text("BLACK HOLE"),
+          title: const Text(
+            "BLACK HOLE",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 25,
+            ),
+          ),
+          actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
+        ),
+        body: Padding(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            
+            children: [
+              const Text(
+                "Space deatails",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                    color: Color.fromARGB(255, 255, 255, 255)),
+              ),
+              Center(
+                child: Image.asset(
+                  "assets/space1.png",
+                  height: 300,
+                  scale: 2,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
